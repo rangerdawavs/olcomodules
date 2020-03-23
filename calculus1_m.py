@@ -25,17 +25,3 @@ def der(graph_x,graph_y,n):
         return d
     else:
         return 'error'
-
-graph_x=track(3)
-graph_y=track(3)
-x=1
-while True:
-    update(graph_y,2**x)
-    update(graph_x,x)
-    print(graph_x,graph_y)
-    if(der(graph_y,graph_x,-1)=='error'):
-        print(der(graph_y,graph_x,-1))
-    else:
-        print(der(graph_y,graph_x,-1)/(2**(graph_x[-2])))
-    x=((x*100)+1)/100
-    time.sleep(0.1)
